@@ -22,10 +22,30 @@ const Home = () => {
       </section>
       <footer className='footer'>
         <ul>
-          <li>Instagram</li>
-          <li>Linkedin</li>
-          <li>Whatsapp</li>
-          <li>Github</li>
+        <li>
+            <a href="#">
+                <i className="fa fa-facebook" aria-hidden="true"></i>
+                <span>Facebook</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i className="fa fa-twitter" aria-hidden="true"></i>
+                <span>Linkedin</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i className="fa fa-google-plus" aria-hidden="true"></i>
+                <span>Github</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i className="fa fa-instagram" aria-hidden="true"></i>
+                <span>Instagram</span>
+            </a>
+        </li>
         </ul>
       </footer>
     </div>
