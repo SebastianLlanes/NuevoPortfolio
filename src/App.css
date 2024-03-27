@@ -54,7 +54,9 @@ body {
   padding: 8px;
   border-radius: 4px;
   backdrop-filter: contrast(0.5);
-  -webkit-box-shadow: 3px 3px 1px 0px var(--yellow);
+  -webkit-box-shadow: 2px 2px 5px var(--yellow); /* Prefijo de proveedor para WebKit */
+    -moz-box-shadow: 2px 2px 5px var(--yellow); /* Prefijo de proveedor para Gecko (Firefox) */
+    box-shadow: 2px 2px 5px var(--yellow); /* Propiedad estándar */
   text-wrap: nowrap;
 }
 .li-navbar a {
