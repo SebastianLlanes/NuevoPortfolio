@@ -39,13 +39,23 @@ body {
 .ul-navbar {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  justify-content: center;
+  width: 90%;
   gap: 12px;
   list-style-type: none;
   font-family: var(--font-family-descriptions);
   font-size: var(--size-s);
   font-weight: bolder;
-  justify-content: center;
+}
+.ul-navbar li {
+  align-items: center;
+  align-self: center;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 4px;
+  backdrop-filter: contrast(0.5);
+  -webkit-box-shadow: 3px 3px 1px 0px var(--yellow);
+  text-wrap: nowrap;
 }
 .li-navbar a {
   font-family: var(--font-family-descriptions);
@@ -148,7 +158,8 @@ body {
   color: var(--white);
   list-style-type: none;
 }
-@media only screen and (max-width: 375px) {
+
+@media only screen and (max-width: 360px) {
   html, body {
     width: 100%;
     height: 100%;
