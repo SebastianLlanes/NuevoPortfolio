@@ -1,4 +1,8 @@
 import Navbar from '../Components/Navbar';
+import Facebook from '../assets/icons/facebook.png';
+import Linkedin from '../assets/icons/linkedin.png';
+import Instagram from '../assets/icons/instagram.png';
+import Github from '../assets/icons/github.png';
 import ProfileImg from '../assets/images/Picsart_22-11-07_14-04-00-132.png';
 import '../App.css';
 
@@ -25,25 +29,25 @@ const Home = () => {
         <li>
             <a href="#">
                 <i className="fa fa-facebook" aria-hidden="true"></i>
-                <span>Facebook</span>
+                <span><img src={Facebook} alt='facebook'/></span>
             </a>
         </li>
         <li>
             <a href="#">
                 <i className="fa fa-twitter" aria-hidden="true"></i>
-                <span>Linkedin</span>
+                <span><img src={Linkedin} alt='Linkedin' /></span>
             </a>
         </li>
         <li>
             <a href="#">
                 <i className="fa fa-google-plus" aria-hidden="true"></i>
-                <span>Github</span>
+                <span><img src={Github} alt='Github' /></span>
             </a>
         </li>
         <li>
             <a href="#">
                 <i className="fa fa-instagram" aria-hidden="true"></i>
-                <span>Instagram</span>
+                <span><img src={Instagram} alt='Instagram' /></span>
             </a>
         </li>
         </ul>

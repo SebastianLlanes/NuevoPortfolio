@@ -34,7 +34,7 @@ body {
   width: 100%;
   padding: 0;
   flex-direction: row;
-  background-color: var(--grape);
+  background-color: var(--smoky-black);
 }
 .ul-navbar {
   display: flex;
@@ -53,10 +53,10 @@ body {
   width: fit-content;
   padding: 8px;
   border-radius: 4px;
-  backdrop-filter: contrast(0.5);
+  background: var(--smoky-black);
   -webkit-box-shadow: 2px 2px 5px var(--yellow); /* Prefijo de proveedor para WebKit */
     -moz-box-shadow: 2px 2px 5px var(--yellow); /* Prefijo de proveedor para Gecko (Firefox) */
-    box-shadow: 2px 2px 5px var(--yellow); /* Propiedad estándar */
+    box-shadow: 1px 2px 5px var(--yellow); /* Propiedad estándar */
   text-wrap: nowrap;
 }
 .li-navbar a {
@@ -102,9 +102,9 @@ body {
   margin-top: -10px;
   content: "";
   position: absolute;
-  height: 280px;
-  width: 99%;
-  background: linear-gradient(180deg, rgba(7, 7, 7, 1) 35%, rgba(74, 35, 90, 1) 100%);
+  height: 288px;
+  width: 100%;
+  background: var(--smoky-black);
   border-radius: 0 0 480px 480px;
 }
 .img-profile-div {
@@ -128,7 +128,6 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #000000 50%, rgba(74, 35, 90, 1) 100%);
   color: var(--white);
   font-family: var(--font-family-titles);
   font-size: var(--size-l);
@@ -136,9 +135,12 @@ body {
   z-index: -1;
 }
 .titles-home-div h1 {
+  margin: 30px 0 10px 0;
+  padding: 0;
+  font-size: 72px;
   font-weight: 100;
   color: var(--smoky-black);
-  -webkit-text-stroke: 1px var(--yellow);
+  color: var(--yellow);
 }
 .titles-home-div h2 {
   font-weight: 100;
@@ -149,7 +151,6 @@ body {
   margin-top: -1px;
   display: flex;
   height: 10%;
-  background: var(--grape);
 }
 .footer ul {
   /* display: flex;
@@ -170,21 +171,16 @@ body {
   list-style: none;
   margin: 0 140px;
 }
-.footer ul li a .fa {
-  font-size: 40px;
-  color: #262626;
-  line-height: 80px;
-  transition: .5s;
-  padding-right: 14px;
-}
+
 .footer ul li a span {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 30px;
-  color: var(--yellow);
-  letter-spacing: 4px;
+  top: 10px;
   transition: .5s;
+}
+.footer ul li a span img {
+  width: 30px;
 }
 .footer ul li a {
   text-decoration: none;
@@ -193,7 +189,6 @@ body {
   width: 50px;
   height: 50px;
   background: var(--smoky-black);
-  border: 1px solid var(--smoky-black);
   text-align: left;
   padding-left: 20px;
   transform: rotate(-30deg) skew(25deg) translate(0, 0);
@@ -208,7 +203,6 @@ body {
   height: 100%;
   width: 20px;
   background: var(--yellow);
-  border: 1px solid var(--smoky-black); 
   transform: .5s;
   transform: rotate(0deg) skewY(-45deg);
 }
@@ -220,7 +214,6 @@ body {
   height: 20px;
   width: 100%;
   background: var(--yellow);
-  border: 1px solid var(--smoky-black);
   transform: .5s;
   transform: rotate(0deg) skewX(-45deg);
 }
@@ -253,22 +246,22 @@ body {
   background: #53b9e0;
 }
 .footer ul li:hover:nth-child(3) a {
-  background: #dd4b39;
+  background: #ABB2B9 ;
 }
 .footer ul li:hover:nth-child(3) a:before {
-  background: #b33a2b;
+  background: #D5D8DC ;
 }
 .footer ul li:hover:nth-child(3) a:after {
-  background: #e66a5a;
+  background: #EAECEE;
 }
 ul li:hover:nth-child(4) a {
-  background: #e4405f;
+  background: #E67E22 ;
 }
 ul li:hover:nth-child(4) a:before {
-  background: #d81c3f;
+  background: #D68910;
 }
 ul li:hover:nth-child(4) a:after {
-  background: #e46880;
+  background: #F8C471;
 }
 @media only screen and (max-width: 360px) {
   html, body {
