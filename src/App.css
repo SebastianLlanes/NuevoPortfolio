@@ -40,7 +40,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   gap: 8px;
   list-style-type: none;
   font-family: var(--font-family-descriptions);
