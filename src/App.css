@@ -39,7 +39,7 @@ header {
 }
 .navbar {
   display: flex;
-  width: 100%;
+  width: 80%;
   padding: 0;
   flex-direction: row;
   background-color: var(--smoky-black);
@@ -48,7 +48,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   gap: 8px;
   list-style-type: none;
   font-family: var(--font-family-descriptions);
@@ -199,7 +199,7 @@ header {
   padding-left: 20px;
   transform: rotate(-30deg) skew(25deg) translate(0, 0);
   transition: .5s;
-  box-shadow: -20px 20px 10px var(--yellow);
+  box-shadow: -20px 20px 10px var(--grape);
 }
 .footer ul li a:before {
   content: '';
@@ -208,7 +208,7 @@ header {
   left: -20px;
   height: 100%;
   width: 20px;
-  background: var(--yellow);
+  background: var(--grape);
   transform: .5s;
   transform: rotate(0deg) skewY(-45deg);
 }
@@ -219,7 +219,7 @@ header {
   left: -10px;
   height: 20px;
   width: 100%;
-  background: var(--yellow);
+  background: var(--grape);
   transform: .5s;
   transform: rotate(0deg) skewX(-45deg);
 }
