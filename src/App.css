@@ -5,6 +5,7 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: var(--smoky-black);
   /* CSS HEX */
   --yellow: #FFC107 ;
@@ -28,6 +29,12 @@ body {
 }
 .home-div {
   height: 100%;
+}
+header {
+  width: 100%;
+  display: flex;
+  margin: 0 0%;
+  padding: 0px;
 }
 .navbar {
   display: flex;
@@ -159,11 +166,11 @@ body {
   color: var(--white);
   list-style-type: none; */
   position: absolute;
-  left: 50%;
+  left: 46%;
   transform: translate(-50%, -50%);
   display: flex;
-  margin: 0;
-  padding: 0;
+  margin: 8% auto 0;
+  gap: 60px;
 }
 .footer ul li {
   list-style: none;
@@ -282,7 +289,7 @@ ul li:hover:nth-child(4) a:after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin: 48px auto 0 auto;
+    margin: 34% auto 0;
     padding: 0;
   }
   .footer ul li {
