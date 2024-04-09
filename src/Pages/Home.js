@@ -13,7 +13,8 @@ const [text, setText] = useState(["", ""]);
 const typingSpeed = 100;
 useEffect(() => {
   const typingIntervals = [];
-  const words = ["Frontend", "Developer"];
+  const words = ["Frontend",  "Developer."];
+  
   words.forEach((word, index) => {
     let currentIndex = 0;
     const intervalId = setInterval(() => {

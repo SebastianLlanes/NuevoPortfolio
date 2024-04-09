@@ -331,3 +331,39 @@ ul li:hover:nth-child(4) a:after {
   }
   
 }
+/*ESTILOS PARA SLIDER DE ABOUT*/
+.slider {
+  aspect-ratio: 10 / 16;
+  width: 300px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+.slider::-webkit-scrollbar {
+  width: 4px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo del riel de la barra de desplazamiento vertical */
+.slider::-webkit-scrollbar-track {
+  background: var(--first-color); /* Color de fondo del riel */
+}
+
+/* Estilo del pulgar de la barra de desplazamiento vertical */
+.slider::-webkit-scrollbar-thumb {
+  background: var(--white); /* Color del pulgar */
+}
+
+/* Estilo del pulgar de la barra de desplazamiento vertical al pasar el mouse */
+.slider::-webkit-scrollbar-thumb:hover {
+  background: var(--second-color); /* Color del pulgar al pasar el mouse */
+}
+
+.slider img {
+  width: 100%;
+  position: sticky;
+  object-fit: cover;
+  border-radius: 8px;
+  scroll-snap-align: center;
+}
