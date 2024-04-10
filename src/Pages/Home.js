@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Navbar from '../Components/Navbar';
 import ProfileImg from '../assets/images/Picsart_22-11-07_14-04-00-132.png';
+import HtmlIcon from '../assets/icons/html.png';
+import CssIcon from '../assets/icons/css.png';
+import JavascriptIcon from '../assets/icons/js.png';
+import ReactIcon from '../assets/icons/react.png';
+import ResponsiveIcon from '../assets/icons/responsive.png';
 import '../App.css';
 
 const Home = () => {
@@ -52,8 +57,15 @@ useEffect(() => {
             {text[0]} {text[1]}
               <span className="cursor">|</span> {/* Cursor intermitente */}
             </h2>
-          </div>
+          </div>          
         </section>
+        <div className='icon-container'>
+            <img src={ HtmlIcon } alt='Html' />
+            <img src={ CssIcon } alt='Css' />
+            <img src={ JavascriptIcon } alt='Javascript' />
+            <img src={ ReactIcon } alt='React' />
+            <img src={ ResponsiveIcon } alt='Responsive' />
+          </div>
       </div>
   );
 }
