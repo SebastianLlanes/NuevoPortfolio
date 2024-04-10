@@ -4,7 +4,7 @@ import ImageSlider from '../Components/ImageSlider';
 const About = () => {
   return (
       <div id='page' className='home-div'>
-        <section>
+        <section className='about-section'>
           <ImageSlider />
           <div className='titles-home-div'>
             <h1>Welcome to my website!</h1>
