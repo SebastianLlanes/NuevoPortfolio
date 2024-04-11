@@ -15,29 +15,27 @@ function Card() {
 
   return (
     <>
-       {cardContent.map(card => (
-       <div className="card">
-              <div className="content" key={card.trabajo}>
-                <div className="back">
-                  <div className="back-content">
+       {cardContent.map((card, index) => (
+       <div className='card' key={index} >
+              <div className='content' >
+                <div className='back'>
+                  <div className='back-content'>
                     <h3>{card.trabajo}</h3>
                   </div>
                 </div>
-                <div className="front">
-                  <div className="img">
+                <div className='front'>
+                  <div className='img'>
                   <img src={card.image} alt={card.trabajo} />
                   </div>
 
-                  <div className="front-content">
-                    <h4 className="badge">{card.empresa}</h4>
-                    <div className="description">
-                      <div className="title">
-                        <p className="title">
+                  <div className='front-content'>
+                    <h4 className='badge'>{card.empresa}</h4>
+                    <div className='description'>
+                      <div className='title'>                  
                           <h4>{card.puesto}</h4>
-                        </p>
                       </div>
-                      <p className="card-footer">{card.etapa}</p>
-                      <p className="card-footer">{card.tiempo}</p>
+                      <p className='card-footer'>{card.etapa}</p>
+                      <p className='card-footer'>{card.tiempo}</p>
                     </div>
                   </div>
                 </div>

@@ -199,7 +199,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: inherit;
+  padding: 40px;
 }
 .exp-container h2 {
   color: var(--first-color);
@@ -213,15 +213,14 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  justify-content: center;
   gap: 10%;
 }
 /*CARDS*/
 .card {
   overflow: visible;
-  width: 190px;
-  height: 254px;
+  width: 300px;
+  height: 400px;
 }
 
 .content {
@@ -276,6 +275,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 30px;
 }
 
@@ -498,6 +498,11 @@ ul li:hover:nth-child(4) a:after {
       }
       .exp-container h2 {
         font-size: 42px;
+      }
+      .card {
+        overflow: visible;
+        width: 170px;
+        height: 240px;
       }
       .footer {
         margin-top: -1px;
