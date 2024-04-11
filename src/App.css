@@ -344,13 +344,13 @@ header {
 
 .front .img {
   position: absolute;
-  width: 100%;
+  width: 120%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 .img img {
-  width: 100%;
+  width: 110%;
   height: 100%;
   margin-bottom: 8px;
 }
