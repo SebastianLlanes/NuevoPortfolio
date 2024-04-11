@@ -1,10 +1,14 @@
 import React from 'react';
+import '../App.css';
+import Card from '../Components/Card';
 
 const Experience = () => {
   return (
-    <div>
-      <h1>Experience!</h1>
-      <p>This is the Experience page of my React.js website.</p>
+    <div className='exp-container'>
+      <h2>Experience</h2>
+      <div className='exp-card-container'>
+        <Card />
+      </div>
     </div>
   );
 }

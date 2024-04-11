@@ -6,23 +6,7 @@ import RugbyImg from '../assets/images/rugby.jpg';
 import FirefighteClaseImg from '../assets/images/bomberoclase.jpg';
 import '../App.css';
 
-// const ImageSlider = () => {
-//   return (
-//     <div className="slider">
-//       <img src={FamilyImg} alt="Family" />
 
-//       <img src={FirefighterImg} alt="Firefighting" />
-
-//       <img src={MilitarImg} alt="militar" />
-
-//       <img src={RugbyImg} alt="Rugby" />
-
-//       <img src={FirefighteClaseImg} alt="Firefighter Class" />
-//     </div>
-//   );
-// };
-
-// export default ImageSlider;
 const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
