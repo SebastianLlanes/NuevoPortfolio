@@ -1,13 +1,16 @@
 import React from "react";
+import FreelanceImg from '../assets/images/freelance-card.jpg';
 import MilitarImg from '../assets/images/militar-modified.jpg';
+import BomberoImg from '../assets/images/bombero-card.jpg';
+import PanaderiaImg from '../assets/images/panaderia.jpg';
 
 function Card() {
 
   const cardContent = [
-    { trabajo: 'Freelance', tiempo: '2 años' , etapa: '2022/Actualidad', empresa: 'Autonomo'  },
-    { trabajo: 'Militar', puesto: 'Soldado Primera Clase', tiempo: '6 años' , etapa: '2005/2011', empresa: 'Fuerza Aerea Argentina'  },
-    { trabajo: 'Bombero Aeronautico', puesto: 'Jefe de grupo', tiempo: '13 años' , etapa: '2011/Actualidad', empresa: 'Administracion Nacional de Aviacion Civil'  },
-    { trabajo: 'Comercio', puesto: 'Atencion al publico', tiempo: '1 año' , etapa: '2004/2005', empresa: 'Panaderia Rosario'  },
+    { trabajo: 'Freelance', puesto: 'Emprendedor', tiempo: '2 años' , etapa: '2022/Actualidad', image: FreelanceImg ,empresa: 'Autonomo'  },
+    { trabajo: 'Militar', puesto: 'Soldado Primera Clase', tiempo: '6 años' , etapa: '2005/2011', image: MilitarImg ,empresa: 'Fuerza Aerea Argentina'  },
+    { trabajo: 'Bombero Aeronautico', puesto: 'Jefe de grupo', tiempo: '13 años' , etapa: '2011/Actualidad', image: BomberoImg ,empresa: 'Administracion Nacional de Aviacion Civil'  },
+    { trabajo: 'Comercio', puesto: 'Atencion al publico', tiempo: '1 año' , etapa: '2004/2005', image: PanaderiaImg ,empresa: 'Panaderia Rosario'  },
   ]
 
   return (
@@ -22,7 +25,7 @@ function Card() {
                 </div>
                 <div className="front">
                   <div className="img">
-                    <img src={MilitarImg} alt='Militar' />
+                  <img src={card.image} alt={card.trabajo} />
                   </div>
 
                   <div className="front-content">
