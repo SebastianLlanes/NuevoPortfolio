@@ -368,6 +368,105 @@ header {
     transform: translateY(0px);
   }
 }
+/*ESTILOS KNOWNLEDGE*/
+.knownledge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+  .knownledge-container h2 {
+    color: var(--first-color);
+    font-family: var(--font-family-titles);
+    font-weight: 100;
+    font-size: 70px;
+    -webkit-text-stroke: 0.5px var(--white);
+    text-shadow: 6px 6px 8px var(--second-color);
+  }
+  .knownledge-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    gap: 10%;
+  }
+/* CARD KNOWLEDGE*/
+.project-info {
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  top: -50px;
+}
+
+.project-title {
+  font-weight: 500;
+  font-size: var(--size-s);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--white);
+}
+
+.lighter {
+  font-size: 0.9em;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  font-weight: lighter;
+  color: grey;
+}
+
+/*DELETE THIS TWO LINE*/
+.delete {
+  background-color: #b2b2fd;
+}
+
+.title-img div {
+  width: 90%;
+}
+/*IF USING IMAGES*/
+
+.knownledge-title {
+  background-color: var(--smoky-black);
+  color: var(--second-color);
+  width: 300px;
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: var(--second-color) 0px 50px 100px -20px,
+    var(--second-color) 0px 30px 60px -30px;
+}
+
+.title-img {
+  position: relative;
+  top: -50px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Change the .card-img div to .card-img img to use img*/
+.title-img a,
+.title-img div {
+  height: 150px;
+  width: 90%;
+  /* Change this width here to change the width of the color/image */
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.title-imgs {
+  transition: all 0.5s;
+}
+
 .footer {
   margin-top: -1px;
   display: flex;

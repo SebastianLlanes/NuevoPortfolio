@@ -1,10 +1,14 @@
 import React from 'react';
+import Title from '../Components/Title';
+import '../App.css';
 
 const Knownledge = () => {
   return (
-    <div>
-      <h1>Knownledge!</h1>
-      <p>This is the Knownledge page of my React.js website.</p>
+    <div className='knownledge-container'>
+      <h2>Knownledge!</h2>
+      <div className='knownledge-card-container'>
+        <Title />
+      </div>      
     </div>
   );
 }
