@@ -5,7 +5,7 @@ import '../App.css';
 const Knownledge = () => {
   return (
     <div className='knownledge-container'>
-      <h2>Knownledge!</h2>
+      <h2>Knownledge</h2>
       <div className='knownledge-card-container'>
         <Title />
       </div>      

@@ -11,7 +11,7 @@ import '../App.css';
 const Home = () => {
  //Efecto texto h2
 const [text, setText] = useState(["", ""]);
-const typingSpeed = 100;
+const typingSpeed = 300;
 useEffect(() => {
   const typingIntervals = [];
   const words = ["Frontend",  "Developer."];
