@@ -20,7 +20,8 @@ html {
 }
 body {
   width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 #root {
   width: 100%;
@@ -28,7 +29,10 @@ body {
 }
 .home-div {
   width: 100%;
-  height: 86vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 header {
   width: 100%;
@@ -48,8 +52,8 @@ header {
 .ul-navbar {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-evenly;
+  width: 76%; 
   gap: 8px;
   list-style-type: none;
   font-family: var(--font-family-descriptions);
@@ -143,7 +147,6 @@ header {
   z-index: -1;
 }
 .titles-home-div h1 {
-  margin: 70px 24% 30px 0;
   padding: 0;
   font-size: 80px;
   font-weight: 100;
@@ -200,7 +203,7 @@ header {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 40px;
+  padding-top: 40px;
 }
 .exp-container h2 {
   color: var(--first-color);
@@ -375,7 +378,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 40px;
+    padding-top: 40px;
 }
   .knownledge-container h2 {
     color: var(--first-color);
@@ -699,6 +702,42 @@ ul li:hover:nth-child(4) a:after {
   background: #F8C471;
 }
 @media only screen and (max-width: 760px) {
+      header {
+        margin-right: 8%;
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: row;
+        background-color: var(--smoky-black);
+      }
+      .ul-navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 6px;
+        list-style-type: none;
+      }
+      .ul-navbar li {
+        align-self: center;
+        width: fit-content;
+        border-radius: 4px;
+        background: var(--smoky-black);
+        -webkit-box-shadow: 2px 2px 5px var(--second-color); /* Prefijo de proveedor para WebKit */
+          -moz-box-shadow: 2px 2px 5px var(--second-color); /* Prefijo de proveedor para Gecko (Firefox) */
+        box-shadow: 0px 2px 4px var(--first-color); /* Propiedad estándar */
+        text-wrap: nowrap;
+      }
+      .li-navbar a {
+        font-family: var(--font-family-descriptions);
+        font-size: 10px;
+        font-weight: bolder;
+        color: var(--white);
+        text-decoration: none;
+        -webkit-text-stroke: 0.1px var(--second-color);
+      }
       .titles-home-div h1 {
         display: flex; 
         flex-direction: column;
@@ -717,22 +756,30 @@ ul li:hover:nth-child(4) a:after {
         font-size: 32px;
         align-self: center;
       }
+      .exp-container {
+        margin: 20px 10px;
+      }
       .exp-container h2 {
         font-size: 42px;
       }
       .card {
         overflow: visible;
-        width: 170px;
-        height: 240px;
+        width: 158px;
+        height: 222px;
+      }
+      .back-content {
+        font-size: var(--size-s);
       }
       .knownledge-card-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         justify-content: center;
-        margin-top: 40px;
+        margin: 40px 10px;
         gap: 92px;
-    }
+      }
+        .knownledge-container h2 {
+          font-size: 42px;
+        }
       .footer {
         margin-top: -1px;
         display: flex;
