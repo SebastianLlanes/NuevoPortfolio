@@ -174,7 +174,7 @@ header {
 }
 .icon-container img {
   width: 60px;
-  filter: drop-shadow(2px 2px 2px var(--second-color));
+  filter: drop-shadow(14px 10px 20px var(--second-color));
 }
 /* cursor del h2 */
 .cursor {
@@ -314,7 +314,6 @@ header {
 
 .front-content .badge {
   background-color: #00000055;
-  padding: 2px 10px;
   border-radius: 10px;
   backdrop-filter: blur(2px);
   width: fit-content;
@@ -782,6 +781,9 @@ ul li:hover:nth-child(4) a:after {
         font-size: 32px;
         align-self: center;
       }
+      .icon-container img {
+        width: 30px;
+      }
       .exp-container {
         margin: 20px 10px;
       }
@@ -796,6 +798,25 @@ ul li:hover:nth-child(4) a:after {
       .back-content {
         font-size: var(--size-s);
       }
+      .front .front-content {
+        justify-content: space-evenly;
+    }
+    .front-content .badge {
+      position: fixed;
+      margin: 0;
+      top: 18px;
+    }
+    .title {
+      font-size: 12px;
+    }
+    .badge {
+      font-size: 12px;
+    }
+    .description {
+      bottom: 0;
+      position: fixed;
+      height: 30%;
+    }
       .knownledge-card-container {
         display: grid;
         grid-template-columns: 1fr;

@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import Navbar from '../Components/Navbar';
 import ProfileImg from '../assets/images/Picsart_22-11-07_14-04-00-132.png';
-import HtmlIcon from '../assets/icons/html.png';
-import CssIcon from '../assets/icons/css.png';
-import JavascriptIcon from '../assets/icons/js.png';
-import ReactIcon from '../assets/icons/react.png';
-import ResponsiveIcon from '../assets/icons/responsive.png';
+import HtmlIcon from '../assets/icons/html.svg';
+import CssIcon from '../assets/icons/css.svg';
+import JavascriptIcon from '../assets/icons/js.svg';
+import ReactIcon from '../assets/icons/react.svg';
+import GitIcon from '../assets/icons/git.svg';
+import ResponsiveIcon from '../assets/icons/responsive.svg';
 import '../App.css';
 
 const Home = () => {
@@ -64,6 +65,7 @@ useEffect(() => {
             <img src={ CssIcon } alt='Css' />
             <img src={ JavascriptIcon } alt='Javascript' />
             <img src={ ReactIcon } alt='React' />
+            <img src={ GitIcon } alt='Git' />
             <img src={ ResponsiveIcon } alt='Responsive' />
           </div>
       </div>
