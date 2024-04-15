@@ -511,7 +511,7 @@ header {
   height: inherit;
   position: absolute;
   opacity: 0;
-  animation: slideanim 31s infinite;
+  animation: slideanim 61s infinite;
 }
 
 .slideshow-item:nth-child(1),
@@ -526,6 +526,14 @@ header {
 .slideshow-item:nth-child(3),
 .slideshow-item:nth-child(3) img{
   animation-delay: 20s;
+}
+.slideshow-item:nth-child(4),
+.slideshow-item:nth-child(4) img{
+  animation-delay: 30s;
+}
+.slideshow-item:nth-child(5),
+.slideshow-item:nth-child(5) img{
+  animation-delay: 40s;
 }
 
 .slideshow-item img{
@@ -798,6 +806,9 @@ ul li:hover:nth-child(4) a:after {
         }
         .about-div h2 {
           font-size: 42px;
+        }
+        .slideshow-item img {
+          height: 50%;
         }
       .footer {
         margin-top: -1px;
