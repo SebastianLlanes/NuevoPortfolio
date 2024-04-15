@@ -22,7 +22,7 @@ function Title() {
   return (
     <>
        {titleContent.map((titulo, index) => (
-        <div className="knownledge-card-container" key={index}>
+        <div className="knownledge-card" key={index}>
             <div className="knownledge-title" >
                 <div className="title-img">
                     <img src={titulo.image} alt={titulo.titulo} className="title-imgs pv delete" />
