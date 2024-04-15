@@ -11,11 +11,11 @@ import '../App.css';
 const ImageSlider = () => {
   
   const slideContent = [
-    { picture: FamilyImg, titulo: 'Mi familia', description: 'Algo lindo sobre mi familia' },
-    { picture: FirefighteClaseImg, titulo: 'Enseñando en el cuartel', description: 'Algo sobre el cuartel del aeropuerto y mi rol' },
-    { picture: RugbyImg, titulo: 'Deportista', description: 'Algo lindo sobre el deporte' },
-    { picture: MilitarImg, titulo: 'Mi etapa en Fuerza Aérea', description: 'Algo bueno sobre fuerza aerea' },
-    { picture: FirefighterImg, titulo: 'Mi vocación', description: 'Algo bueno sobre ser bombero' },
+    { picture: FamilyImg, titulo: 'Mi familia', description: 'Es el núcleo mas importante de mi vida, la plataforma de lanzamiento desde donde despegan mis proyectos.' },
+    { picture: FirefighteClaseImg, titulo: '20 años en aeronaútica', description: 'Tengo una larga trayectoria en el ámbito aeroportuario, dedicándome siempre al Servicio de Salvamento y Extinción de Incendios en Aeronaves.' },
+    { picture: RugbyImg, titulo: 'Deportista', description: 'La etapa deportiva la considero importante porque me enseño valores como el trabajo en equipo, el compromiso y el esfuerzo.' },
+    { picture: MilitarImg, titulo: 'Mi etapa en Fuerza Aérea', description: 'Durante seis años, tuve el honor de servir como soldado en la Fuerza Aérea. Estos años moldearon mi carácter, enseñándome a enfrentar desafíos con determinación y a liderar con integridad.Al dia de hoy sigue siendo una fuente constante de inspiración en mi carrera profesional.' },
+    { picture: FirefighterImg, titulo: 'Mi vocación', description: 'Como bombero aeronáutico, he aprendido a responder con rapidez y precisión en situaciones críticas, trabajando en estrecha colaboración con equipos multidisciplinarios para garantizar la seguridad de todos.' },
     
   ]
 

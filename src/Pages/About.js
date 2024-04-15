@@ -3,8 +3,9 @@ import ImageSlider from '../Components/ImageSlider';
 
 const About = () => {
   return (
-      <div id='page' className='home-div'>
-        <section className='about-section'>
+      <div id='page'  className='about-div'>
+        <h2>About me</h2>
+        <section className='about-section'>          
           <ImageSlider />
           {/* <div className='titles-home-div'>
             <h1>Welcome to my website!</h1>
