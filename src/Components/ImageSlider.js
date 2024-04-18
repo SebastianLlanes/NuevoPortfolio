@@ -1,8 +1,8 @@
 import React from 'react';
 import FamilyImg from '../assets/images/family-modified.png';
-import FirefighterImg from '../assets/images/bombero.jpg';
-import MilitarImg from '../assets/images/militar-modified.jpg';
-import RugbyImg from '../assets/images/rugby.jpg';
+import FirefighterImg from '../assets/images/bombero.jpeg';
+import MilitarImg from '../assets/images/militar-modified.jpeg';
+import RugbyImg from '../assets/images/rugby.jpeg';
 import FirefighteClaseImg from '../assets/images/bomberoclase.jpg';
 import '../App.css';
 

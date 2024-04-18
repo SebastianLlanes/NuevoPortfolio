@@ -1,6 +1,6 @@
 import React from "react";
 import FreelanceImg from '../assets/images/freelance-card.jpg';
-import MilitarImg from '../assets/images/militar-modified.jpg';
+import MilitarImg from '../assets/images/militar-modified.jpeg';
 import BomberoImg from '../assets/images/bombero-card.jpg';
 import PanaderiaImg from '../assets/images/panaderia.jpg';
 
