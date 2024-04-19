@@ -758,6 +758,9 @@ header {
   text-shadow: 6px 6px 8px var(--second-color);
 }
 /* FORM */
+#hire {
+  min-width: 44%;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -768,15 +771,26 @@ form {
   width: 100%;
   position: relative;
   margin-bottom: 15px;
+  padding: 4%;
 }
-
+#motivo {
+  position: relative;
+  margin-left: 26%;
+  width: 77%;
+  font-family: var(--font-family-descriptions);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 2px;
+  z-index: 1;
+}
 form label {
   text-transform: uppercase;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   background: var(--smoky-black);
   width: 98%;
+  height: 28px;
   padding: 2px;
   border: 1px solid var(--second-color);
   border-radius: 8px;
@@ -817,6 +831,7 @@ form textarea {
 
   &#msg {
       height: 48px;
+      margin-top: 14px;
       resize: none;
       transition: all 333ms ease-in-out;
   }
