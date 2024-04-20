@@ -8,23 +8,20 @@ function Navbar() {
         
           <li className='li-navbar'>
             <a href="/">Home</a>
-          </li>
-        
-        
+          </li>        
+
           <li className='li-navbar'>
             <a href="/Experience">Experience</a>
-          </li>
-               
+          </li>           
+
           <li className='li-navbar'>
             <a href="/Knownledge">Knownledge</a>
-          </li>
-        
-        
+          </li>      
+
           <li className='li-navbar'>
             <a href="/About">About me</a>
-          </li>
-        
-        
+          </li>     
+            
           <li className='li-navbar'>
             <a href="/Contact">Contact</a>
           </li>

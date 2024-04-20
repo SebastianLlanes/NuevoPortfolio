@@ -64,7 +64,6 @@ header {
   align-self: center;
   width: fit-content;
   padding: 4px;
-  border-radius: 4px;
   background: var(--smoky-black);
   text-wrap: nowrap;
 }  
