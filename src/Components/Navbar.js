@@ -7,23 +7,23 @@ function Navbar() {
       <ul className='ul-navbar'>
         
           <li className='li-navbar'>
-            <a href="/">Home</a>
+            <a href="#home">Home</a>
           </li>        
 
           <li className='li-navbar'>
-            <a href="/Experience">Experience</a>
+          <a href="#experience">Experience</a>
           </li>           
 
           <li className='li-navbar'>
-            <a href="/Knownledge">Knownledge</a>
+          <a href="#knowledge">Knowledge</a>
           </li>      
 
           <li className='li-navbar'>
-            <a href="/About">About me</a>
+          <a href="#about">About me</a>
           </li>     
             
           <li className='li-navbar'>
-            <a href="/Contact">Contact</a>
+          <a href="#contact">Contact</a>
           </li>
         
       </ul>
