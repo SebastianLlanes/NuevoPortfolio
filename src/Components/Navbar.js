@@ -14,15 +14,14 @@ function Navbar() {
           <li className='li-navbar'>
             <a href="/Experience">Experience</a>
           </li>
-        
-       
+               
           <li className='li-navbar'>
             <a href="/Knownledge">Knownledge</a>
           </li>
         
         
           <li className='li-navbar'>
-            <a href="/about">About me</a>
+            <a href="/About">About me</a>
           </li>
         
         
