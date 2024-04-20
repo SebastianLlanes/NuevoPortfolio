@@ -805,13 +805,17 @@ form {
 }
 #motivo {
   position: relative;
-  margin-left: 26%;
+  margin-left: 24%;
+  bottom: 8px;
   width: 77%;
+  height: 30px;
   font-family: var(--font-family-descriptions);
   font-weight: 600;
-  border-radius: 8px;
+  border: none;
   padding: 2px;
   z-index: 1;
+  background: none;
+  color: var(--first-color);
 }
 form label {
   text-transform: uppercase;
@@ -1165,7 +1169,9 @@ form input[type="submit"] {
   .slideshow-item img {
     height: 50%;
   }
-
+#motivo {
+  bottom: 0;
+}
   .footer {
     margin-top: -1px;
     display: flex;
