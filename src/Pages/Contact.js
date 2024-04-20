@@ -88,6 +88,18 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    // Validaciones de formulario
+    if (!formData.name || !formData.email || !formData.msg) {
+      toast.error('Por favor, completa todos los campos obligatorios.');
+      return;
+    }
+
+    // Validación de correo electrónico utilizando una expresión regular simple
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      toast.error('Por favor, introduce una dirección de correo electrónico válida.');
+      return;
+    }
     // Envío de datos a través de Formspree
     try {
       const response = await fetch('https://formspree.io/f/mqkoegol', {
