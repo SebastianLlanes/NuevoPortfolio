@@ -471,6 +471,39 @@ header {
     transform: translateY(0px);
   }
 }
+.exp-container a {
+  text-decoration: none;
+}
+.exp-container a button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  width: fit-content;
+  display: block;
+  margin: 70% auto 10%;
+  padding: 10px 22px;
+  font-family: var(--font-family-titles);
+  font-size: 16px;
+  color: var(--white);
+  position: relative;
+  z-index: 10;
+}
+.exp-container a button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--second-color);
+  border-radius: 8px;
+  z-index: -1;
+  transition: 1s;
+}
+.exp-container button:hover .overlay {
+  width: 100%;
+  border-radius: 8px;
+}
 /*PROJECTS CARDS AND CONTAINER*/
 .project-card-container {
   display: flex;

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { SketchPicker } from 'react-color';
 
 function ColorPicker() {
-  const [color1, setColor1] = useState('#00ffff'); // Color 1 inicial
-  const [color2, setColor2] = useState('#9400d3'); // Color 2 inicial
+  const [color1, setColor1] = useState('#00ffff');
+  const [color2, setColor2] = useState('#9400d3'); 
   const [showColorPicker1, setShowColorPicker1] = useState(false);
   const [showColorPicker2, setShowColorPicker2] = useState(false);
 
