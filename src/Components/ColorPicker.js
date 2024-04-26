@@ -1,51 +1,52 @@
 import React, { useState } from 'react';
-import { SketchPicker } from 'react-color';
-
+import { GithubPicker } from 'react-color';
 function ColorPicker() {
   const [color1, setColor1] = useState('#00ffff');
-  const [color2, setColor2] = useState('#9400d3'); 
-  const [showColorPicker1, setShowColorPicker1] = useState(false);
-  const [showColorPicker2, setShowColorPicker2] = useState(false);
-
-  const handleColorChange1 = (newColor) => {
-    setColor1(newColor.hex);
-    document.documentElement.style.setProperty('--first-color', newColor.hex); // Actualiza el color 1 en el CSS
+  const [color2, setColor2] = useState('#9400d3');
+  const [selectedColor, setSelectedColor] = useState(null);
+  const handleColorChange = (newColor) => {
+    if (selectedColor === 'color1') {
+      setColor1(newColor.hex);
+      document.documentElement.style.setProperty('--first-color', newColor.hex);
+    } else if (selectedColor === 'color2') {
+      setColor2(newColor.hex);
+      document.documentElement.style.setProperty('--second-color', newColor.hex);
+    }
   };
-
-  const handleColorChange2 = (newColor) => {
-    setColor2(newColor.hex);
-    document.documentElement.style.setProperty('--second-color', newColor.hex); // Actualiza el color 2 en el CSS
+  const handleColorContainerClick = (color) => {
+    setSelectedColor(color);
   };
-
-  const toggleColorPicker1 = () => {
-    setShowColorPicker1(!showColorPicker1);
+  const handleColorPickerClose = () => {
+    setSelectedColor(null);
   };
-
-  const toggleColorPicker2 = () => {
-    setShowColorPicker2(!showColorPicker2);
-  };
-
   return (
-    <div className='colorPicker-principal-div' >
-        
-      <div className="color-container" onClick={toggleColorPicker1}>
+    <div className='colorPicker-principal-div'>
+      <div className="color-container" onClick={() => handleColorContainerClick('color1')}>
         <div className="color-box" style={{ backgroundColor: color1 }}></div>
-        {showColorPicker1 && (
+        {selectedColor === 'color1' && (
           <div className="color-picker">
-            <SketchPicker color={color1} onChange={handleColorChange1} />
+            <GithubPicker 
+              color={color1}
+              onChange={handleColorChange}
+              onChangeComplete={handleColorPickerClose}
+            />
           </div>
         )}
       </div>
-      <div className="color-container" onClick={toggleColorPicker2}>
+      <div className="color-container" onClick={() => handleColorContainerClick('color2')}>
         <div className="color-box" style={{ backgroundColor: color2 }}></div>
-        {showColorPicker2 && (
+        {selectedColor === 'color2' && (
           <div className="color-picker">
-            <SketchPicker color={color2} onChange={handleColorChange2} />
+            <GithubPicker
+              color={color2}
+              onChange={handleColorChange}
+              onChangeComplete={handleColorPickerClose}
+            />
           </div>
         )}
       </div>
     </div>
   );
 }
-
 export default ColorPicker;
+
