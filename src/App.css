@@ -1210,6 +1210,10 @@ form input[type="submit"] {
     top: auto;
     bottom: 18%;
   }
+  .color-picker {
+    bottom: 230px;
+    top: auto;
+  }
   .toggle-color-picker-btn {
     bottom: 10%;
     top: auto;
