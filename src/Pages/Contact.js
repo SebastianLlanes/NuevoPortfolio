@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../Components/Footer';
 import { Toaster, toast } from 'sonner';
+import Whatsapp from '../assets/icons/whatsapp.png';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,6 +61,14 @@ const Contact = () => {
     }
   };
 
+  const numeroPersonal = '3425045770'; // Coloca aquí tu número de teléfono
+
+  const handleClick = () => {
+    const mensaje = 'Hola, estoy en contacto directo contigo desde mi sitio web.';
+    const url = `https://api.whatsapp.com/send?phone=${numeroPersonal}&text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  }
+  
   return (
     <>
       <div className='contact-div'>
@@ -103,6 +112,7 @@ const Contact = () => {
         </section>
       </div>
       <Footer />
+      <button className='contacto-directo' onClick={handleClick}> <p>Contacto Directo</p> <img src= {Whatsapp} alt='Whatsapp'/> </button>
     </>
   );
 }

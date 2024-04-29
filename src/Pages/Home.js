@@ -70,6 +70,8 @@ const toggleColorPicker = () => {
    // Intercambiamos los valores de las variables
    root.style.setProperty('--smoky-black', currentWhite);
    root.style.setProperty('--white', currentSmokyBlack);
+
+   root.style.transition = 'background-color 0.5s ease';
  };
 
   return (
