@@ -71,7 +71,7 @@ const toggleColorPicker = () => {
    root.style.setProperty('--smoky-black', currentWhite);
    root.style.setProperty('--white', currentSmokyBlack);
 
-   root.style.transition = 'background-color 0.5s ease';
+   root.style.transition = 'background-color 0.9s ease';
  };
 
   return (
