@@ -239,9 +239,10 @@ header {
   z-index: 1; 
 }
 .img-profile-div img {
-  width: 44vh;
+  width: 48vh;
+  height: 46vh;
   mask-image: linear-gradient(
-    var(--smoky-black) 70%, 
+    var(--smoky-black) 40%, 
     transparent
   );
 }
