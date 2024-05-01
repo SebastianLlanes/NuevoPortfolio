@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Navbar from '../Components/Navbar';
 import ColorPicker from '../Components/ColorPicker';
 
-import ProfileImg from '../assets/images/portada.png';
+import ProfileImg from '../assets/images/Picsart_22-11-07_14-04-00-132.png';
 import HtmlIcon from '../assets/icons/html.svg';
 import CssIcon from '../assets/icons/css.svg';
 import JavascriptIcon from '../assets/icons/js.svg';
