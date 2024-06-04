@@ -6,6 +6,7 @@ import SantaGulaIcon from '../assets/images/santagula.jpg';
 import AntroIcon from '../assets/images/antro.png';
 import ToDoAppIcon from '../assets/images/todoapp.png';
 import SubscriptionTrackerIcon from '../assets/images/popcorn2.png';
+import GifsForAllIcon from '../assets/images/GifForAll.png';
 import '../App.css';
 
 function Project() {
@@ -15,6 +16,7 @@ function Project() {
     { project: 'Menú digital', image: AntroIcon, description: 'Menú digital con portada, botones de bebidas y comidas, enlaces a redes sociales y Spotify', techOne: JavascriptIcon, techTwo: ReactIcon, techThree: CssIcon, url: 'https://antro-bar.vercel.app' },
     { project: 'ToDo App', image: ToDoAppIcon, description: 'Task Machine para quienes desean tener orden con un simple ayuda memoria.', techOne: JavascriptIcon, techTwo: ReactIcon, techThree: CssIcon, url: 'https://sebastianllanes.github.io/ToDoApp/' },
     { project: 'Subscriptions Tracker', image: SubscriptionTrackerIcon, description: 'App para control de gastos en subscripciones.', techOne: JavascriptIcon, techTwo: ReactIcon, techThree: CssIcon, url: 'https://subscriptions-tracker-one.vercel.app/' },
+    { project: 'Gif For All', image: GifsForAllIcon, description: 'Buscador de Gif. Integracion de API', techOne: JavascriptIcon, techTwo: ReactIcon, techThree: CssIcon, url: 'https://gifs-for-all.vercel.app/' },
     // { project: 'Weather App', image: , description: 'App desarrollada para obtener el comportamiento del clima.',techOne: JavascriptIcon, techTwo: ReactIcon, techThree: CssIcon },
     
   ]
