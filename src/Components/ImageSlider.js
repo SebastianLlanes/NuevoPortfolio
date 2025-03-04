@@ -1,5 +1,5 @@
 import React from 'react';
-import FamilyImg from '../assets/images/family-modified.png';
+import FamilyImg from '../assets/images/family2025.jpg';
 import FirefighterImg from '../assets/images/bombero.jpeg';
 import MilitarImg from '../assets/images/militar-modified.jpeg';
 import RugbyImg from '../assets/images/rugby.jpeg';
