@@ -4,20 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import img1 from "../assets/images/Picsart_25-03-05_00-12-57-839.png"; //Imagen principal de perfil
 import img2 from "../assets/images/Picsart_25-03-05_00-15-00-231.png";
 import img3 from "../assets/images/Picsart_25-03-05_00-15-46-568.png";
-import img4 from "../assets/images/Picsart_25-03-05_18-10-03-245.png";
+import img4 from "../assets/images/Picsart_25-03-05_00-17-04-764.png";
 import img5 from "../assets/images/Picsart_25-03-05_18-07-30-580.png";
 import img6 from "../assets/images/Picsart_25-03-05_18-08-18-335.png";
-import img7 from "../assets/images/Picsart_25-03-05_00-17-04-764.png";
-import img8 from "../assets/images/Picsart_25-03-05_18-11-02-073.png";
+ 
 
-const images = [ img1, img2, img3, img4, img5, img6, img7, img8 ]; // Rutas de las imágenes
+
+const images = [ img1, img2, img3, img4, img5, img6, ]; // Rutas de las imágenes
 
 const ProfileCarousel = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     // Define la duración de cada imagen
-    const durations = [3000, 500, 500, 500, 500, 500, 500, 500]; // img1 = 3s, otras = 1s
+    const durations = [3000, 500, 500, 500, 500, 500]; // img1 = 3s, otras = 1s
     const timer = setTimeout(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, durations[index]);

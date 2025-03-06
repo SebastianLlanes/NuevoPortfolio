@@ -241,8 +241,8 @@ header {
 
 }
 .img-profile-div img {
-  width: 50vh;
-  height: 50vh;
+  width: 40vh;
+  height: 40vh;
   mask-image: linear-gradient(
     var(--smoky-black) 40%, 
     transparent
