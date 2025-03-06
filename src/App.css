@@ -237,10 +237,12 @@ header {
   width: 50%;
   height: 100%;
   z-index: 1; 
+  margin-top: -4%;
+
 }
 .img-profile-div img {
-  width: 46vh;
-  height: 46vh;
+  width: 50vh;
+  height: 50vh;
   mask-image: linear-gradient(
     var(--smoky-black) 40%, 
     transparent
@@ -248,19 +250,15 @@ header {
 }
 Descomentar cuando se aplique el carousel
 .profile-image {
+  position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  transition: opacity 0.5s ease-in-out;
+  filter: brightness(1.2) contrast(1.1); /* Ajuste para el destello */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
-.fade-in {
-  opacity: 1;
-}
 
-.fade-out {
-  opacity: 0;
-}
 
 .titles-home-div {
   display: flex;
