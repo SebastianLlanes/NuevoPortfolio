@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import Card from '../Components/Card';
 import Project from '../Components/Project';
-import Curriculum from '../assets/images/LlanesCVi.pdf';
+import Curriculum from '../assets/images/Sebastián Llanes.pdf';
 
 const Experience = () => {
   return (
