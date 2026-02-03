@@ -4,7 +4,7 @@ import HtmlCssImg from '../assets/images/html-css.png';
 import GitImg from '../assets/images/git.png';
 import JavascriptImg from '../assets/images/javascript.png';
 import ResponsiveImg from '../assets/images/responsivedesign.png';
-import WebpackImg from '../assets/images/webpack.png';
+import PythonImg from '../assets/images/pythonImg.png';
 import '../App.css';
 
 function Title() {
@@ -15,7 +15,7 @@ function Title() {
     { titulo: 'GIT', institucion: 'Platzi', image: GitImg },
     { titulo: 'Javascript', institucion: 'Platzi', image: JavascriptImg },
     { titulo: 'Responsive Design', institucion: 'Platzi', image: ResponsiveImg },
-    { titulo: 'Webpack', institucion: 'Platzi', image: WebpackImg },
+    { titulo: 'Python', institucion: 'Cognitive Class(IBM)', image: PythonImg  },
     
   ]
 

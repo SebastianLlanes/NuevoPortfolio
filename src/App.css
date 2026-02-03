@@ -734,6 +734,8 @@ Descomentar cuando se aplique el carousel
   height: 180px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  cursor: zoom-in;
 }
 
 /* Change the .card-img div to .card-img img to use img*/
@@ -748,7 +750,14 @@ Descomentar cuando se aplique el carousel
 }
 
 .title-imgs {
-  transition: all 0.5s;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transform-origin: center center;
+}
+.title-img:hover .title-imgs {
+  transform: scale(1.8); /* ajustá el nivel de zoom */
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  cursor: zoom-out;
 }
 /*ABOUT SECTION*/
 .about-div {
