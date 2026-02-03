@@ -7,9 +7,9 @@ import PanaderiaImg from '../assets/images/panaderia.jpg';
 function Card() {
 
   const cardContent = [
-    { trabajo: 'Freelance', puesto: 'Emprendedor', tiempo: '2 años' , etapa: '2022/Actualidad', image: FreelanceImg ,empresa: 'Autonomo'  },
+    { trabajo: 'Freelance', puesto: 'Emprendedor', tiempo: '4 años' , etapa: '2022/Actualidad', image: FreelanceImg ,empresa: 'Autonomo'  },
     { trabajo: 'Militar', puesto: 'Soldado Primera Clase', tiempo: '6 años' , etapa: '2005/2011', image: MilitarImg ,empresa: 'Fuerza Aerea Argentina'  },
-    { trabajo: 'Bombero Aeronautico', puesto: 'Jefe de grupo', tiempo: '13 años' , etapa: '2011/Actualidad', image: BomberoImg ,empresa: 'Administracion Nacional de Aviacion Civil'  },
+    { trabajo: 'Bombero Aeronautico', puesto: 'Jefe de grupo', tiempo: '15 años' , etapa: '2011/Actualidad', image: BomberoImg ,empresa: 'Administracion Nacional de Aviacion Civil'  },
     { trabajo: 'Comercio', puesto: 'Atencion al publico', tiempo: '1 año' , etapa: '2004/2005', image: PanaderiaImg ,empresa: 'Panaderia Rosario'  },
   ]
 
