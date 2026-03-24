@@ -24,7 +24,7 @@ const [text, setText] = useState(["", ""]);
 const typingSpeed = 300;
 useEffect(() => {
   const typingIntervals = [];
-  const words = ["Frontend",  "Developer."];
+  const words = ["Click",  "Scroll", "Wow!"];
   
   words.forEach((word, index) => {
     let currentIndex = 0;
