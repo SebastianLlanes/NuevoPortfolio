@@ -8,6 +8,7 @@ import HtmlIcon from '../assets/icons/html.svg';
 import CssIcon from '../assets/icons/css.svg';
 import JavascriptIcon from '../assets/icons/js.svg';
 import ReactIcon from '../assets/icons/react.svg';
+import FirebaseIcon from '../assets/icons/firebaseicon.png';
 import GitIcon from '../assets/icons/git.svg';
 import ResponsiveIcon from '../assets/icons/responsive.svg';
 import ColorPickerIcon from '../assets/icons/color-picker.png';
@@ -112,6 +113,7 @@ const toggleColorPicker = () => {
             <img src={ CssIcon } alt='Css' />
             <img src={ JavascriptIcon } alt='Javascript' />
             <img src={ ReactIcon } alt='React' />
+            <img src={ FirebaseIcon } alt='Firebase' />
             <img src={ GitIcon } alt='Git' />
             <img src={ ResponsiveIcon } alt='Responsive' />
           </div>
