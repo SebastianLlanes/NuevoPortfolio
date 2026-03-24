@@ -20,35 +20,37 @@ import '../App.css';
 
 const Home = () => {
  //Efecto texto h2
-const [text, setText] = useState(["", ""]);
-const typingSpeed = 300;
+const words = ["Click", "Scroll", "Wow!"];
+const typingSpeed = 120;
+const delayBetweenWords = 600;
+
+const [text, setText] = useState(Array(words.length).fill(""));
+const [wordIndex, setWordIndex] = useState(0);
+const [charIndex, setCharIndex] = useState(0);
+
 useEffect(() => {
-  const typingIntervals = [];
-  const words = ["Click",  "Scroll", "Wow!"];
-  
-  words.forEach((word, index) => {
-    let currentIndex = 0;
-    const intervalId = setInterval(() => {
-      setText((prevText) => {
-        if (prevText[index].length < word.length) {
-          return [
-            ...prevText.slice(0, index),
-            word.substring(0, currentIndex + 1),
-            ...prevText.slice(index + 1),
-          ];
-        } else {
-          clearInterval(intervalId);
-          return prevText;
-        }
+  if (wordIndex >= words.length) return;
+
+  const currentWord = words[wordIndex];
+
+  const timeout = setTimeout(() => {
+    if (charIndex < currentWord.length) {
+      setText((prev) => {
+        const updated = [...prev];
+        updated[wordIndex] = currentWord.substring(0, charIndex + 1);
+        return updated;
       });
-      currentIndex++;
-    }, typingSpeed);
-    typingIntervals.push(intervalId);
-  });
-  return () => {
-    typingIntervals.forEach((intervalId) => clearInterval(intervalId));
-  };
- }, []);
+      setCharIndex((prev) => prev + 1);
+    } else {
+      setTimeout(() => {
+        setWordIndex((prev) => prev + 1);
+        setCharIndex(0);
+      }, delayBetweenWords);
+    }
+  }, typingSpeed);
+
+  return () => clearTimeout(timeout);
+}, [charIndex, wordIndex]);
 
 // Color Picker
 const [colorPickerVisible, setColorPickerVisible] = useState(false);
@@ -77,47 +79,51 @@ const toggleColorPicker = () => {
  };
 
   return (
-      <div className='home-div'>
-        <header>
-          <Navbar />
-          <button
-            className='colorPicker-toggle-button' 
-            onClick={toggleColorPicker}
-            ><img src={ ColorPickerIcon } alt='Color picker' />
-          </button>
-          {colorPickerVisible && <ColorPicker />}
+    <div className="home-div">
+      <header>
+        <Navbar />
+        <button
+          className="colorPicker-toggle-button"
+          onClick={toggleColorPicker}
+        >
+          <img src={ColorPickerIcon} alt="Color picker" />
+        </button>
+        {colorPickerVisible && <ColorPicker />}
 
-          <button 
-            className="toggle-color-picker-btn" 
-            onClick={toggleDarkMode}>
-            {darkMode ? <img src={Sun} alt='Light mode' /> : <img src={Moon} alt='Dark mode' /> }
-          </button>
-        
-        </header>
-        <section>
-          <div className='border-efect-div'>
-            <div className='img-profile-div'>
+        <button className="toggle-color-picker-btn" onClick={toggleDarkMode}>
+          {darkMode ? (
+            <img src={Sun} alt="Light mode" />
+          ) : (
+            <img src={Moon} alt="Dark mode" />
+          )}
+        </button>
+      </header>
+      <section>
+        <div className="border-efect-div">
+          <div className="img-profile-div">
             <ProfileCarousel />
-            </div>
           </div>
-          <div className='titles-home-div'>
-            <h1>Sebastián Llanes</h1>
-            <h2>
-            {text[0]} {text[1]}
-              <span className="cursor">|</span> {/* Cursor intermitente */}
-            </h2>
-          </div>          
-        </section>
-        <div className='icon-container'>
-            <img src={ HtmlIcon } alt='Html' />
-            <img src={ CssIcon } alt='Css' />
-            <img src={ JavascriptIcon } alt='Javascript' />
-            <img src={ ReactIcon } alt='React' />
-            <img src={ FirebaseIcon } alt='Firebase' />
-            <img src={ GitIcon } alt='Git' />
-            <img src={ ResponsiveIcon } alt='Responsive' />
-          </div>
+        </div>
+        <div className="titles-home-div">
+          <h1>Sebastián Llanes</h1>
+          <h2>
+            {text.map((t, i) => (
+              <span key={i}>{t} </span>
+            ))}
+            <span className="cursor">|</span>
+          </h2>
+        </div>
+      </section>
+      <div className="icon-container">
+        <img src={HtmlIcon} alt="Html" />
+        <img src={CssIcon} alt="Css" />
+        <img src={JavascriptIcon} alt="Javascript" />
+        <img src={ReactIcon} alt="React" />
+        <img src={FirebaseIcon} alt="Firebase" />
+        <img src={GitIcon} alt="Git" />
+        <img src={ResponsiveIcon} alt="Responsive" />
       </div>
+    </div>
   );
 }
 
