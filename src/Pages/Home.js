@@ -17,10 +17,10 @@ import Sun from '../assets/icons/sun-mode.png';
 
 import '../App.css';
 
+const words = ["Click", "Scroll", "Wow!"];
 
 const Home = () => {
- //Efecto texto h2
-const words = ["Click", "Scroll", "Wow!"];
+
 const typingSpeed = 120;
 const delayBetweenWords = 600;
 
