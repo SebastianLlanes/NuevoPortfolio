@@ -19,7 +19,6 @@ useEffect(() => {
   const sections = ['home', 'experience', 'knowledge', 'about', 'contact'];
 
   const handleScroll = () => {
-    const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
 
     let current = sections[0];
