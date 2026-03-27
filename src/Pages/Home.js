@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Components/Navbar';
 import ColorPicker from '../Components/ColorPicker';
 import ProfileCarousel from "../Components/ProfileCarousel";
@@ -17,40 +17,8 @@ import Sun from '../assets/icons/sun-mode.png';
 
 import '../App.css';
 
-const words = ["Click", "Scroll", "Wow!"];
-
 const Home = () => {
 
-const typingSpeed = 120;
-const delayBetweenWords = 600;
-
-const [text, setText] = useState(Array(words.length).fill(""));
-const [wordIndex, setWordIndex] = useState(0);
-const [charIndex, setCharIndex] = useState(0);
-
-useEffect(() => {
-  if (wordIndex >= words.length) return;
-
-  const currentWord = words[wordIndex];
-
-  const timeout = setTimeout(() => {
-    if (charIndex < currentWord.length) {
-      setText((prev) => {
-        const updated = [...prev];
-        updated[wordIndex] = currentWord.substring(0, charIndex + 1);
-        return updated;
-      });
-      setCharIndex((prev) => prev + 1);
-    } else {
-      setTimeout(() => {
-        setWordIndex((prev) => prev + 1);
-        setCharIndex(0);
-      }, delayBetweenWords);
-    }
-  }, typingSpeed);
-
-  return () => clearTimeout(timeout);
-}, [charIndex, wordIndex]);
 
 // Color Picker
 const [colorPickerVisible, setColorPickerVisible] = useState(false);
@@ -63,41 +31,37 @@ const toggleColorPicker = () => {
  const [darkMode, setDarkMode] = useState(true);
 
  // Función para cambiar entre el modo claro y oscuro
- const toggleDarkMode = () => {
-   setDarkMode(!darkMode);
-
-   // Obtenemos los estilos actuales de las variables CSS
-   const root = document.documentElement;
-   const currentSmokyBlack = getComputedStyle(root).getPropertyValue('--smoky-black');
-   const currentWhite = getComputedStyle(root).getPropertyValue('--white');
-
-   // Intercambiamos los valores de las variables
-   root.style.setProperty('--smoky-black', currentWhite);
-   root.style.setProperty('--white', currentSmokyBlack);
-
-   root.style.transition = 'background-color 0.9s ease';
- };
-
+// REEMPLAZÁ la función toggleDarkMode completa
+const toggleDarkMode = () => {
+  setDarkMode(!darkMode);
+  document.documentElement.classList.toggle('light-mode');
+};
   return (
     <div className="home-div">
       <header>
         <Navbar />
-        <button
-          className="colorPicker-toggle-button"
-          onClick={toggleColorPicker}
-        >
-          <img src={ColorPickerIcon} alt="Color picker" />
-        </button>
-        {colorPickerVisible && <ColorPicker />}
-
-        <button className="toggle-color-picker-btn" onClick={toggleDarkMode}>
-          {darkMode ? (
-            <img src={Sun} alt="Light mode" />
-          ) : (
-            <img src={Moon} alt="Dark mode" />
-          )}
-        </button>
       </header>
+
+      <div className="floating-controls">
+        <div className="floating-controls__item">
+          <button className="floating-btn" onClick={toggleColorPicker}>
+            <img src={ColorPickerIcon} alt="Color picker" />
+          </button>
+          <span className="floating-btn__tooltip">Personalizar colores</span>
+        </div>
+        <div className="floating-controls__item">
+          <button className="floating-btn" onClick={toggleDarkMode}>
+            <img
+              src={darkMode ? Sun : Moon}
+              alt={darkMode ? "Light mode" : "Dark mode"}
+            />
+          </button>
+          <span className="floating-btn__tooltip">
+            {darkMode ? "Modo claro" : "Modo oscuro"}
+          </span>
+        </div>
+        {colorPickerVisible && <ColorPicker />}
+      </div>
       <section>
         <div className="border-efect-div">
           <div className="img-profile-div">
@@ -106,11 +70,14 @@ const toggleColorPicker = () => {
         </div>
         <div className="titles-home-div">
           <h1>Sebastián Llanes</h1>
-          <h2>
-            {text.map((t, i) => (
-              <span key={i}>{t} </span>
-            ))}
-            <span className="cursor">|</span>
+          <h2 className="catchphrase">
+            <span className="catchphrase__word catchphrase__word--1">
+              Click.
+            </span>
+            <span className="catchphrase__word catchphrase__word--2">
+              Scroll.
+            </span>
+            <span className="catchphrase__word catchphrase__word--3">Wow.</span>
           </h2>
         </div>
       </section>

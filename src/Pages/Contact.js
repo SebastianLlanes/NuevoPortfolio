@@ -17,104 +17,89 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Validaciones de formulario
     if (!formData.name || !formData.email || !formData.msg) {
       toast.error('Por favor, completa todos los campos obligatorios.');
       return;
     }
-
-    // Validación de correo electrónico utilizando una expresión regular simple
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(formData.email)) {
       toast.error('Por favor, introduce una dirección de correo electrónico válida.');
       return;
     }
-    // Envío de datos a través de Formspree
     try {
       const response = await fetch('https://formspree.io/f/mqkoegol', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-
       if (response.ok) {
-        // Si el envío es exitoso, muestra un mensaje de éxito
         toast.success('¡Gracias por contactarme! Me pondré en contacto contigo pronto.');
-        // Limpiar el formulario después de enviarlo con éxito
-        setFormData({
-          name: '',
-          email: '',
-          motivo: 'proyecto',
-          msg: ''
-        });
+        setFormData({ name: '', email: '', motivo: 'proyecto', msg: '' });
       } else {
-        // Si hay un error en el envío, muestra un mensaje de error
         toast.error('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
       }
     } catch (error) {
-      console.error('Error al enviar el formulario:', error);
-      // Si hay un error en la conexión, muestra un mensaje de error
       toast.error('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
     }
   };
 
-  const numeroPersonal = '3425045770'; // Coloca aquí tu número de teléfono
-
-  const handleClick = () => {
+  const handleWhatsapp = () => {
     const mensaje = 'Hola, estoy en contacto directo contigo desde mi sitio web.';
-    const url = `https://api.whatsapp.com/send?phone=${numeroPersonal}&text=${encodeURIComponent(mensaje)}`;
+    const url = `https://api.whatsapp.com/send?phone=3425045770&text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
-  }
-  
+  };
+
   return (
     <>
-      <div className='contact-div'>
-        <h2>Contact</h2>
-        <section id='hire'>
-          <form onSubmit={handleSubmit}>
-            <div className='field name-box'>
-              <input type='text' id='name' placeholder='Quién eres?' value={formData.name} onChange={handleChange} autoComplete="name" />
-              <label htmlFor='name'>name</label>
-            </div>
-
-            <div className='field email-box'>
-              <input type='text' id='email' placeholder='name@email.com'  value={formData.email} onChange={handleChange} autoComplete="email" />
-              <label htmlFor='email'>Email</label>
-            </div>
-            <div className='field'>
-              <label htmlFor='motivo'>Motivo:</label>
-              <select id='motivo' name='motivo' value={formData.motivo} onChange={handleChange} autoComplete="motivo">
-                <option value='proyecto'>Proyectar una idea</option>
-                <option value='oferta'>Por una oferta laboral</option>
-                <option value='cafe'>Tomamos un café y te cuento</option>
-              </select>
-            </div>
-
-            <div className='field msg-box'>
-              <textarea
-                id='msg'
-                rows='4'
-                placeholder='Deja tu mensaje...'
-                value={formData.msg} onChange={handleChange} autoComplete="msg"
-              />
-              <label htmlFor='msg'>Msg</label>
-            </div>
-            <Toaster richColors position="top-center" />
-            <input 
-              className='button'
-              type='submit' 
-              value='Send' 
-              />
-          </form>
-        </section>
+      <Toaster richColors position="top-center" />
+      <div className="contact-div">
+        <div className="contact-bg" />
+        <div className="contact-inner">
+          <div className="contact-header">
+            <h2>Contact</h2>
+            <p className="contact-subtitle">
+              ¿Tenés un proyecto en mente o una oferta laboral?<br />
+              Escribime o contactame directo por WhatsApp.
+            </p>
+          </div>
+          <div className="contact-glass">
+            <form onSubmit={handleSubmit}>
+              <div className="contact-row">
+                <div className="contact-field">
+                  <label htmlFor="name">Nombre</label>
+                  <input type="text" id="name" placeholder="¿Quién eres?" value={formData.name} onChange={handleChange} autoComplete="name" />
+                </div>
+                <div className="contact-field">
+                  <label htmlFor="email">Email</label>
+                  <input type="text" id="email" placeholder="name@email.com" value={formData.email} onChange={handleChange} autoComplete="email" />
+                </div>
+              </div>
+              <div className="contact-field">
+                <label htmlFor="motivo">Motivo</label>
+                <select id="motivo" name="motivo" value={formData.motivo} onChange={handleChange}>
+                  <option value="proyecto">Proyectar una idea</option>
+                  <option value="oferta">Por una oferta laboral</option>
+                  <option value="cafe">Tomamos un café y te cuento</option>
+                </select>
+              </div>
+              <div className="contact-field">
+                <label htmlFor="msg">Mensaje</label>
+                <textarea id="msg" rows="4" placeholder="Dejá tu mensaje..." value={formData.msg} onChange={handleChange} />
+              </div>
+              <div className="contact-actions">
+                <button type="submit" className="contact-submit">Enviar →</button>
+                <button type="button" className="contact-whatsapp" onClick={handleWhatsapp}>
+                  <img src={Whatsapp} alt="WhatsApp" />
+                  Contacto directo
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
       <Footer />
-      <button className='contacto-directo' onClick={handleClick}> <p>Contacto Directo</p> <img src= {Whatsapp} alt='Whatsapp'/> </button>
     </>
   );
-}
+};
 
 export default Contact;

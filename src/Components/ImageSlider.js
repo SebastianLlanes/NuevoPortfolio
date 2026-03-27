@@ -60,7 +60,11 @@ const ImageSlider = () => {
           key={index}
           className={`slideshow-item ${index === activeIndex ? 'slideshow-item--active' : ''}`}
         >
-          <img src={slide.picture} alt={slide.titulo} className={index === 3 ? 'slide-img--right' : ''} />
+          <img 
+          src={slide.picture} 
+          alt={slide.titulo} 
+          className={index === 3 ? 'slide-img--right' : ''}
+           />
           <div className='slideshow-item-text'>
             <h5>{slide.titulo}</h5>
             <p>{slide.description}</p>

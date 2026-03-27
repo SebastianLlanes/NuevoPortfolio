@@ -5,32 +5,36 @@ import Instagram from '../assets/icons/instagram.png';
 import Github from '../assets/icons/github.png';
 
 function Footer() {
+  const links = [
+    { href: "https://web.facebook.com/bastianlla", icon: Facebook, alt: "Facebook", color: "#1877f2" },
+    { href: "https://www.linkedin.com/in/sebasti%C3%A1n-llanes-86547b250/", icon: Linkedin, alt: "LinkedIn", color: "#0a66c2" },
+    { href: "https://github.com/SebastianLlanes", icon: Github, alt: "GitHub", color: "#f0f0f0" },
+    { href: "https://www.instagram.com/_sebastian_llanes/", icon: Instagram, alt: "Instagram", color: "#e1306c" },
+  ];
 
   return (
-    <footer className='footer'>
-        <ul>
-            <li>
-                <a href="https://web.facebook.com/bastianlla" target='blank'>                  
-                    <span><img src={Facebook} alt='facebook'/></span>
+    <footer className="footer">
+      <div className="footer-glass">
+        <ul className="footer-links">
+          {links.map(function(link, index) {
+            return (
+              <li key={index}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                  style={{ '--link-color': link.color }}
+                >
+                  <img src={link.icon} alt={link.alt} />
                 </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/sebasti%C3%A1n-llanes-86547b250/" target='blank'>                  
-                    <span><img src={Linkedin} alt='Linkedin' /></span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/SebastianLlanes" target='blank'>                    
-                    <span><img src={Github} alt='Github' /></span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/_sebastian_llanes/" target='blank'>
-                    <span><img src={Instagram} alt='Instagram' /></span>
-                </a>
-            </li>
-        </ul>   
-  </footer>
+              </li>
+            );
+          })}
+        </ul>
+        <p className="footer-copy">© 2025 Sebastián Llanes · Click. Scroll. <span>Wow!</span></p>
+      </div>
+    </footer>
   );
 }
 
